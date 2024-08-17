@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "remediator.fullname" . }}
+  labels:
+    {{- include "remediator.labels" . | nindent 4 }}
+spec:
+  podSelector:
+    matchLabels:
+      {{- include "remediator.selectorLabels" . | nindent 6 }}
+  egress:
+  - {}
+  policyTypes:
+  - Egress
