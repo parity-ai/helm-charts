@@ -9,6 +9,7 @@ parity:
   apikey: ### FILL_THIS_IN ###
   url: remediator.api.tryparity.com
   port: 443
+  readonly: true
 
 image:
   repository: parityai/remediator

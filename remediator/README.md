@@ -12,26 +12,22 @@ You must have `helm` installed and be able to connect to your cluster to complet
 
 1. (optional) Double check that the rest of the values in `values.yaml` are to your liking. We generated these using `helm create`, and left almost everything as default. Please ensure that `replicaCount` remains `1`.
 
-1. Run the following command to create a `parity` namespace in your cluster
-
-    ```
-    kubectl create namespace parity
-    ```
-
-    If you already have a namespace `parity` in use, create a new namespace with a different name of your choise and update `parity.namespace` in `values.yaml`.
+1. Double check that you don't have a namespace called `parity` in your cluster. If you do already have a namespace `parity`, update `parity.namespace` in `values.yaml` to a value of your choice. This namespace ***should not*** already exist in your cluster.
 
 1. `cd` into this directory.
 
 1. Run the command
 
     ```
-    helm install -n <NAMESPACE> parity-remediator .
+    helm install parity-remediator .
     ```
 
-    where `<NAMESPACE>` is the namespace you created before. If you need to update `values.yaml` later, run
+    `remediator` is installed in your cluster!
+
+    If you need to update `values.yaml` later, run
 
     ```
-    helm upgrade -n <NAMESPACE> parity-remediator . --values values.yaml
+    helm upgrade parity-remediator . --values values.yaml
     ```
 
     from this directory to apply the changes.
