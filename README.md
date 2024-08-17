@@ -4,6 +4,6 @@ This repository holds helm charts for installing Parity's services in your Kuber
 
 ### Services
 
-- [`remediator`](remediator/README.md)
+- [`remediator`](remediator)
 
 - ...more to come!
