@@ -9,6 +9,11 @@ spec:
     matchLabels:
       {{- include "remediator.selectorLabels" . | nindent 6 }}
   egress:
-  - {}
+  - to:
+    - ipBlock:
+        cidr: 34.168.135.128/32 ## remediator.api.tryparity.com
+    ports:
+    - protocol: TCP
+      port: 443
   policyTypes:
   - Egress
