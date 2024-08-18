@@ -10,6 +10,8 @@ You must have `helm` installed and be able to connect to your cluster to complet
 
 1. Update the `parity.apikey` value in `values.yaml` with your API key. Visit [our website](https://auth.tryparity.com/org/api_keys) to generate an API key.
 
+1. Update `parity.tag` with the latest version from https://hub.docker.com/repository/docker/parityai/remediator/tags. We recommend not using the tag `latest`.
+
 1. (optional) Double check that the rest of the values in `values.yaml` are to your liking. We generated these using `helm create`, and left almost everything as default. Please ensure that `replicaCount` remains `1`.
 
 1. Double check that you don't have a namespace called `parity` in your cluster. If you do already have a namespace `parity`, update `parity.namespace` in `values.yaml` to a value of your choice. This namespace ***should not*** already exist in your cluster.
