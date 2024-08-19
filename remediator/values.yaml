@@ -15,7 +15,7 @@ image:
   repository: parityai/remediator
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: v1.0.1 ### replace this with the latest version at https://hub.docker.com/repository/docker/parityai/remediator/tags
+  tag: v1.0.0 ### replace this with the latest version at https://hub.docker.com/repository/docker/parityai/remediator/tags
 
 serviceAccount:
   name: "parity-remediator-service-account"
