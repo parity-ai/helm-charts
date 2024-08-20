@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "remediator.fullname" . }}
-  namespace: {{ .Values.parity.namespace }}
   labels:
     {{- include "remediator.labels" . | nindent 4 }}
 spec:
