@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  remediator:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-08-20T15:45:05.911104-07:00"
+    description: A helm chart for the Parity AI Remediator service
+    digest: 1f6b2ed499e904101315a52d8bf5081505ce357c5cde217a8caf60724dd0340a
+    name: remediator
+    type: application
+    urls:
+    - https://github.com/parity-ai/helm-charts/remediator-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-08-20T15:45:05.909975-07:00"
