@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "remediator.labels" . | nindent 4 }}
 rules:
-  - apiGroups: [""]
+  - apiGroups: ["*"]
     resources: ["*"]
 {{- if .Values.parity.readonly }}
     verbs: ["get", "list", "watch"]
