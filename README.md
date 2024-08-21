@@ -1,6 +1,6 @@
 # Parity AI's `helm-charts` repo
 
-This repository holds helm charts for installing Parity's services in your Kubernetes cluster. It's designed to be easy enough to follow for self-service installation, but if you run into any issues please reach out to founders@tryparity.com!
+This repository holds helm charts for installing Parity's services in your Kubernetes cluster. Check out our [quickstart guide](https://docs.tryparity.com/quickstart) to install these into your cluster, and if you run into any issues please reach out to founders@tryparity.com!
 
 ### Services
 
