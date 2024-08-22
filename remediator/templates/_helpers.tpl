@@ -54,9 +54,12 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 Create the name of the service account to use
 */}}
 {{- define "remediator.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "remediator.fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
+{{ include "remediator.fullname" . }}-service-account
 {{- end }}
+
+{{/*
+Create the name of the cluster role to use
+*/}}
+{{- define "remediator.clusterRoleName" -}}
+{{ .Release.Namespace }}-{{ include "remediator.fullname" . }}-cluster-role
 {{- end }}

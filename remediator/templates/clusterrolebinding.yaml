@@ -1,14 +1,14 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: {{ include "remediator.serviceAccountName" . }}-cluster-role-binding
+  name: {{ include "remediator.clusterRoleName" . }}-binding
   labels:
     {{- include "remediator.labels" . | nindent 4 }}
 subjects:
 - kind: ServiceAccount
   name: {{ include "remediator.serviceAccountName" . }}
-  namespace: {{ .Values.parity.namespace }}
+  namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: parity-cluster-role
+  name: {{ include "remediator.clusterRoleName" . }}
   apiGroup: rbac.authorization.k8s.io
