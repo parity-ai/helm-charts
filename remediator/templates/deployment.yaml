@@ -25,6 +25,8 @@ spec:
           env:
             - name: API_KEY
               value: {{ .Values.parity.apikey }}
+            - name: CLUSTER_NAME
+              value: {{ .Values.parity.clustername }}
             - name: PARITY_URL
               value: {{ .Values.parity.url }}
             - name: PARITY_PORT

@@ -10,6 +10,7 @@ parity:
   url: remediator.api.tryparity.com
   port: 443
   readonly: true
+  clustername: ### FILL_THIS_IN ###
 
 image:
   repository: parityai/remediator
