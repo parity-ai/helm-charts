@@ -33,7 +33,7 @@ spec:
               value: "{{ .Values.parity.port }}"
             {{- if .Values.parity.tls }}
             - name: USE_TLS
-              value: {{ .Values.parity.tls.enabled }}
+              value: "{{ .Values.parity.tls.enabled }}"
             {{- end }}
           ports:
             - name: http
