@@ -34,6 +34,9 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+egress:
+  restricted: false # enable this to create a network policy that only allows egress to remediator.api.tryparity.com
+
 livenessProbe:
   httpGet:
     path: /liveness
